@@ -11,7 +11,7 @@ export default function useAuth(code) {
 		() => {
 			axios
 				// .post('http://localhost:3001/login', {
-				.post('http://localhost:3001/login', {
+				.post('https://dts-final-152235865101294.herokuapp.com//login', {
 					code
 				})
 				.then((res) => {
@@ -32,7 +32,7 @@ export default function useAuth(code) {
 			if (!refreshToken || !expiresIn) return;
 			const interval = setInterval(() => {
 				axios
-					.post('http://localhost:3001/refresh', {
+					.post('https://dts-final-152235865101294.herokuapp.com//refresh', {
 						// .post('http://localhost:3001/refresh', {
 						refreshToken
 					})
